@@ -8,42 +8,43 @@
 
 ## General Info
 A YouTube video downloader that given a YouTube playlist.
-** Functionality: **
+
+**Functionality:**
 1. creates a .txt file that contains all the individual YouTube video URLs 
 2. extracts the audio signal from the videos as .wav
 3. crops and saves into a new directory the audio signal into K-second segments
 4. crops and saves into a new directory the video signal into K-second segments
 
 **Usage** 
-'''
+
+```
 $python3 preprocess_youtube.py <URL list> <path>
-'''
+```
 
 **Example:**
 
-'''  
+```  
 $python3 preprocess_youtube.py 'https://www.youtube.com/playlist?list=PLP28C3ZgpKBy8G5UqubZgDEI6-vx4LGWH' '/mnt/c/Users/Alekos/Desktop/youtube_videos' 
-'''
-
-where /youtube_videos is a directory that is going to be created 
+```
+#where /youtube_videos is a directory that is going to be created 
 
 ## Modules
 In order to download,extract the .wav files, crop the audio files and crop the optical files
 you need to have following libraries installed in your system:
-* pytube: 
-	For pytube do: 
-	-sudo pip3 uninstall pytube 
-	-sudo pip3 install pytube3 --upgrade 
-	[pytube3](See here: https://github.com/hbmartin/pytube3)
-* [natsort](https://pypi.org/project/natsort/)
-* [pydub](https://pypi.org/project/pydub/)
+*[pytube3](https://github.com/hbmartin/pytube3) 
+*[natsort](https://pypi.org/project/natsort/)
+*[pydub](https://pypi.org/project/pydub/)
+
+**For pytube do:** 
+*sudo pip3 uninstall pytube 
+*sudo pip3 install pytube3 --upgrade 
 
 ## Files
 In order to achieve your goal to download and crop the signals we created two files
 named respectively: 
 
-  1)preprocess_youtube.py
-  2)ffmpeg-split.py ->this file is called from cropVideo()
+  1)preprocess_youtube.py <br>
+  2)ffmpeg-split.py ->this file is called from cropVideo()<br>
     ffmpeg-split.py can be found here:[c0decracker/video-splitter](https://github.com/c0decracker/video-splitter/blob/master/ffmpeg-split.py)
     
 ## Functions 
