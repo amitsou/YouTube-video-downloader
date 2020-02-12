@@ -36,7 +36,7 @@ you need to have following libraries installed in your system:<br>
 * [natsort](https://pypi.org/project/natsort/)<br>
 * [pydub](https://pypi.org/project/pydub/)
 
-**For pytube do:** 
+**For pytube do:**<br>
 ```sudo pip3 uninstall pytube ``` <br>
 ```sudo pip3 install pytube3 --upgrade``` 
 
