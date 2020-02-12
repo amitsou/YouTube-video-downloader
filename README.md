@@ -29,15 +29,16 @@ $python3 preprocess_youtube.py 'https://www.youtube.com/playlist?list=PLP28C3Zgp
 #where /youtube_videos is a directory that is going to be created 
 
 ## Modules
-In order to download,extract the .wav files, crop the audio files and crop the optical files
-you need to have following libraries installed in your system:
-*[pytube3](https://github.com/hbmartin/pytube3) 
-*[natsort](https://pypi.org/project/natsort/)
-*[pydub](https://pypi.org/project/pydub/)
+In order to download,extract the .wav files, crop the audio files and crop the optical files<br>
+you need to have following libraries installed in your system:<br>
+
+* [pytube3](https://github.com/hbmartin/pytube3)<br>
+* [natsort](https://pypi.org/project/natsort/)<br>
+* [pydub](https://pypi.org/project/pydub/)
 
 **For pytube do:** 
-*sudo pip3 uninstall pytube 
-*sudo pip3 install pytube3 --upgrade 
+```sudo pip3 uninstall pytube ``` <br>
+```sudo pip3 install pytube3 --upgrade``` 
 
 ## Files
 In order to achieve your goal to download and crop the signals we created two files
