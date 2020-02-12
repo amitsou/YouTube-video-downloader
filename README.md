@@ -14,15 +14,17 @@ A YouTube video downloader that given a YouTube playlist.
 3. crops and saves into a new directory the audio signal into K-second segments
 4. crops and saves into a new directory the video signal into K-second segments
 
-** Usage **
+**Usage** 
 '''
 $python3 preprocess_youtube.py <URL list> <path>
 '''
 
-** Example: **
+**Example:**
+
 '''  
 $python3 preprocess_youtube.py 'https://www.youtube.com/playlist?list=PLP28C3ZgpKBy8G5UqubZgDEI6-vx4LGWH' '/mnt/c/Users/Alekos/Desktop/youtube_videos' 
 '''
+
 where /youtube_videos is a directory that is going to be created 
 
 ## Modules
@@ -32,22 +34,23 @@ you need to have following libraries installed in your system:
 	For pytube do: 
 	-sudo pip3 uninstall pytube 
 	-sudo pip3 install pytube3 --upgrade 
-	(See here: https://github.com/hbmartin/pytube3)
-* natsort
-* pydub
+	[pytube3](See here: https://github.com/hbmartin/pytube3)
+* [natsort](https://pypi.org/project/natsort/)
+* [pydub](https://pypi.org/project/pydub/)
 
 ## Files
 In order to achieve your goal to download and crop the signals we created two files
 named respectively: 
-  1)"preprocess_youtube.py"
-  2)"ffmpeg-split.py" ->this file is called from cropVideo()
-    "ffmpeg-split.py" can be found here:https://github.com/c0decracker/video-splitter/blob/master/ffmpeg-split.py
+
+  1)preprocess_youtube.py
+  2)ffmpeg-split.py ->this file is called from cropVideo()
+    ffmpeg-split.py can be found here:[c0decracker/video-splitter](https://github.com/c0decracker/video-splitter/blob/master/ffmpeg-split.py)
     
 ## Functions 
 In the file named "preprocess_youtube.py" exist the following functions:
 	
-  1)runBash(command)
-
+  	1)runBash(command)
+		
 	2)DownloadVideo(URL,path)
           This function downloads the entire playlist from youtube to the directory where
           "preprocess_youtube.py" is. In addition it saves each individual youtube videoURL
@@ -68,7 +71,7 @@ In the file named "preprocess_youtube.py" exist the following functions:
           'python2 /yourDirectory/video_segments/ffmpeg-split.py -f  -s K'
           where K is the number of seconds.
 
-          ** DO NOT FORGET to set the directories especially for your system **
+          **DO NOT FORGET to set the directories especially for your system**
   
 	  #do not forget to include this part:
           #### /video_segments/auxiliary.py -f  -s 10
@@ -80,7 +83,7 @@ In the file named "preprocess_youtube.py" exist the following functions:
           In this function we call every aforementioned function and get the user inputs 
           from the terminal
 
-## DISCLAIMER!
+### DISCLAIMER
 Sometimes the cropVideo() does not work at first! You should comment that function call in main
 run the first three funtions, then comment the first three functions, and then uncomment cropVideo() in main()
 and run only cropVideo()
