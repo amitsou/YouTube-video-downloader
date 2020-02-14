@@ -47,6 +47,8 @@ named respectively:
   1)preprocess_youtube.py <br>
   2)ffmpeg-split.py ->this file is called from cropVideo()<br>
     ffmpeg-split.py can be found here:[c0decracker/video-splitter](https://github.com/c0decracker/video-splitter/blob/master/ffmpeg-split.py)
+  3)video2Frames.py
+    This file creates video frames, given a video signal
     
 ## Functions 
 In the file named "preprocess_youtube.py" exist the following functions:
