@@ -7,7 +7,7 @@
 * [Functions](#functions)
 
 ## General Info
-A YouTube video downloader that given a YouTube playlist.
+A YouTube video downloader that given a YouTube playlist does the following:
 
 **Functionality:**
 1. creates a .txt file that contains all the individual YouTube video URLs 
